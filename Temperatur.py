@@ -44,4 +44,4 @@ while True :
         lampOff()
         led = "☒"
     print(time.strftime('%H:%M:%S') +" - " + str(temperatur)  + str(tempSpacing) + led + graph(temperatur))
-    
+#test
