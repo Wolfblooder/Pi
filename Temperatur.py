@@ -7,7 +7,6 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(21, GPIO.OUT)
 GPIO.setup(20, GPIO.OUT)
 GPIO.setup(16, GPIO.OUT)
-
 #maxtemp muss >= 18 sein
 maxTemp = 24
 warningArea = 1
@@ -52,7 +51,8 @@ def graph(temperatur):
     if(len(i)< (48*scale - (24 - maxTemp)*8*scale)):
         i = i + (" " * (47*scale -((24 - maxTemp)*8*scale)- len(i))) + "|"
     return i
-
+off()
+time.sleep(1)
 while True :
     temperatur = currentTemp()
     led = ""
